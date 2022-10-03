@@ -26,7 +26,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col" id="threeCol" style="width:100px;height:100px">
+                <div class="col" id="threeCol" >
                     <script type="importmap">
                         {
                             "imports": {
@@ -44,10 +44,11 @@
                         const camera = new THREE.PerspectiveCamera( 60, document.getElementById("threeCol").innerWidth / document.getElementById("threeCol").innerHeight, 0.1, 1000 );
                         camera.position.set(5,5,10); 
                         const renderer = new THREE.WebGLRenderer();
-                        renderer.setSize( window.innerWidth, window.innerHeight); 
+                        renderer.setSize( document.getElementById("threeCol").innerWidth, document.getElementById("threeCol").innerHeight);
+                        renderer.setSize( 400, 400); 
                         renderer.setPixelRatio(window.devicePixelRatio);
                         renderer.outputEncoding = THREE.sRGBEncoding; 
-                        document.body.appendChild( renderer.domElement ); 
+                        document.getElementById("threeCol").appendChild( renderer.domElement ); 
                         var mat = new THREE.MeshStandardMaterial();
                         var controls = new OrbitControls(camera, renderer.domElement);
                         var ambientLight = new THREE.AmbientLight(0x202020);
