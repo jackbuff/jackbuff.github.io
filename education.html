@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Jack Ashburn</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <div id="navarea"></div>
+            <script>
+                fetch('/navbar.html').then(res=>res.text())
+                .then(data=>{
+                    document.getElementById("navarea").innerHTML=data;
+                })
+            </script>
+        </div>
+    </head>
+    <body style="background-image: linear-gradient(to left, #ffffff, #cccccc)">
+        <h1 style="font-size:larger; margin:3%">CU Boulder - Computer Science Courses</h1>
+        <div class="row" style="border:none;margin:5%">
+            <div class="col" style="background:local;border:none;margin-right:3%">
+                <div class="card" style="background:local">
+                    <div class="card-body">
+                        <h5 class="card-title">Software Development</h5>
+                        <div class="card-text">
+                            •	Gained experience with HTML and JavaScript <br>
+                            •	Collaborated with a team to produce a website for sending ecards <br>
+                            •	Learned about the Agile development procedure <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="background:local;border:none;margin-right:3%">
+                <div class="card" style="background:local">
+                    <div class="card-body">
+                        <h5 class="card-title">Algorithms</h5>
+                        <div class="card-text">
+                            •	Practiced writing small functions in Python <br>
+                            •	Studied common algorithms and properties such as greedy algorithms and network flows <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="border:none;margin:5%">
+            <div class="col" style="background:local;border:none;margin-right:3%">
+                <div class="card" style="background:local">
+                    <div class="card-body">
+                        <h5 class="card-title">Computer Systems</h5>
+                        <div class="card-text">
+                            •	Used x86-64 Assembly to decipher and exploit C programs <br>
+                            •	Gained experience with bit-level operations <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="background:local;border:none;margin-right:3%">
+                <div class="card" style="background:local">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Structures</h5>
+                        <div class="card-text">
+                            •	Gained foundational skills for working with data structures <br>
+                            •	Practiced with linked lists, multi-dimensional arrays, vectors, etc. <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 style="font-size:larger; margin:3%">CU Boulder - Other Courses</h1>
+        <div class="row" style="border:none;background:local;margin:5%">
+            <div class="col" style="border:none;background:local;margin-right:3%">
+                <div class="card" style="background:local">
+                    <div class="card-body">
+                        <h5 class="card-title">Class</h5>
+                        <div class="card-text">
+                            •   text <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="border:none;background:local;margin-right:3%">
+                <div class="card" style="background:local">
+                    <div class="card-body">
+                        <h5 class="card-title">Class</h5>
+                        <div class="card-text">
+                            •   text <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
