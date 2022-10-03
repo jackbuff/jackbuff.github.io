@@ -53,7 +53,7 @@
                         var controls = new OrbitControls(camera, renderer.domElement);
                         var ambientLight = new THREE.AmbientLight(0x202020);
                         var topLight = new THREE.PointLight(0xffffff,1,60);
-                        topLight.position.set(1,5,5)
+                        topLight.position.set(1,5,5);
                         scene.add(topLight);
                         var topLight2 = new THREE.PointLight(0xffffff,1,60);
                         topLight2.position.set(-2,0,-10);
@@ -63,8 +63,11 @@
                         scene.add(bottomLight);
                         scene.background = new THREE.Color('white');
                         const loader = new GLTFLoader();
-                        var materialChildren = new THREE.MeshBasicMaterial({color: 'black'});
+                        var materialChildren = new THREE.MeshBasicMaterial({color: 'white'});
                         var mat = new THREE.MeshStandardMaterial();
+                        var tex = new THREE.TextureLoader().load("/dieline_example_trimmed.png");
+                        mat.map = tex;
+                        mat.flatShading = false;
                         function loadModel(){
                             loader.load('examplePBpouch.json',
                             function(gltf){
@@ -78,7 +81,7 @@
                                 }
                                 gltf.scene.children[0].children[3].visible = false;
                                 console.log(gltf.scene);
-                                gltf.scene.children[0].material = new THREE.MeshStandardMaterial({color: 'black'});
+                                gltf.scene.children[0].material = mat;
                                 scene.add(gltf.scene);
                             }, undefined, function(error){
                                 console.log("load error");
