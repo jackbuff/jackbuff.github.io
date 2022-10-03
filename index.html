@@ -1,0 +1,42 @@
+<!doctype HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Jack Ashburn</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <div id="navarea"></div>
+        <script>
+            fetch('/navbar.html')
+            .then(res=>res.text())
+            .then(data=>{
+                document.getElementById("navarea").innerHTML=data;
+            });
+        </script>
+    </head>
+    <body style="background-image: linear-gradient(to left, #ffffff, #cccccc">
+        <div class="row" style="margin: 30px">
+            <div class="col" style="margin-right:45%">
+                <div class="card" style="background:local; border:none">
+                    <p style="font-size:larger">About Me</p>
+                </div>
+                <div class="card" style="background:local; border:none">
+                    My name is Jack Ashburn. I'm currently an undergraduate at the University of Colorado at 
+                    Boulder. I'm majoring in Computer Science and working in a Space minor.
+                    My name is Jack Ashburn. I'm currently an undergraduate at the University of Colorado at 
+                    Boulder. I'm majoring in Computer Science and working in a Space minor.
+                    My name is Jack Ashburn. I'm currently an undergraduate at the University of Colorado at 
+                    Boulder. I'm majoring in Computer Science and working in a Space minor.
+                    My name is Jack Ashburn. I'm currently an undergraduate at the University of Colorado at 
+                    Boulder. I'm majoring in Computer Science and working in a Space minor.
+                </div>
+            </div>
+            <div class="col"></div>
+            <div>
+                <div class="card" style="margin-right:15%;margin-left:50%;background:local;border:none">
+                    <img class="rounded-circle" alt="A portrait of me." src="/portrait.jpg">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
