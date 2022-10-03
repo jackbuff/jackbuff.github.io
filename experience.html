@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Jack Ashburn</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <div id="navarea"></div>
+        <script>
+            fetch('/navbar.html')
+            .then(res=>res.text())
+            .then(data=>{
+                document.getElementById("navarea").innerHTML=data;
+            });
+        </script>
+    </head>
+    <body style="background-image: linear-gradient(to left, #ffffff, #cccccc)">
+        <div class="container" id="epacCont" style="background:local">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="background:local;border:none">
+                        <div class="card-body">
+                            <h2>ePac LLC, paid internship </h2>
+                            <h4>May 2022 - </h4> <br>
+                            text
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="threeCol">
+                    <script>
+                        fetch('/threeShow.js').then(res=>res.text()).then(data=>{
+                            document.getElementById("threeCol").innerHTML = data;
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
